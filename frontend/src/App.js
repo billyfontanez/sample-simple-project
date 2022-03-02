@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from "./components/nav"
 import Home from "./components/pages/home"
@@ -10,13 +10,17 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Nav />
+        <Router>
+          <div>
+            <Nav />
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/items" component={Items} />
-          <Route path="/add-item" component={AddItem} />
-        </Switch>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/items" component={Items} />
+              <Route path="/add-item" component={AddItem} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }
