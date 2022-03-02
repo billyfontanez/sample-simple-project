@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom"
 
-import Nav from "./nav"
-import Home from "./pages/home"
-import Items from "./pages/items"
-import AddItem from "./pages/addItem"
+import Nav from "./components/nav"
+import Home from "./components/pages/home"
+import Items from "./components/pages/items"
+import AddItem from "./components/pages/addItem"
 
 export default class App extends Component {
   render() {
